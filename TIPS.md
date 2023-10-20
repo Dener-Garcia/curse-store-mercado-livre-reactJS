@@ -12,9 +12,7 @@
 
 ## Configurando projeto e dependencias
 
-Vamos utilizar o Eslint para forçar um estilo de código, para inicia-lo basta usar comando abaixo e responder alguams perguntas:
-
-> npx eslint --init
+Usaremos o vite como bandle para o projeto
 
 <a id="cleaning"></a>
 
@@ -32,6 +30,8 @@ Por padrão vem alguns arquivos e componentes no projeto por isso vamos apagar o
 <a id="setup"></a>
 
 ## Instalando depedencias e criando configuracao VSCode
+
+Instale no seu brownser a extensão React developers Tools, nela é possivel ver a arvore de componentes do React e ver algumas informações do componente, como props, estados
 
 Cria uma pasta '.vscode' e um arquivo chamado 'settings.json' para salvar as alterações desse projeto, assim que abrir ele no futuro já vai estar todo padronizado com nossa configuração.
 

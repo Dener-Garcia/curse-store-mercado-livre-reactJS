@@ -1,0 +1,29 @@
+button{
+  position: relative;
+  display: flex;
+  align-items: cente;
+  justify-content: center;
+  padding: 4px;
+  border: none;
+  font-size: 2rem;
+  background: none;
+  margin-left: 14px;
+  color: #333;
+  cursor: pointer;
+}
+
+span{
+  position: absolute;
+  left: 50%;
+  top: -4px;
+  width: 1rem;
+  height: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  background-color: #ecf5ff;
+  border-radius: 50%;
+
+  font-size: 0.75rem;
+}
