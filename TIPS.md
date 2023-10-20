@@ -4,6 +4,8 @@
 - [Limpando o Projeto](#cleaning)
 - [Setup do Projeto](#setup)
 - [Estruturando pastas](#folders)
+- [Usando lib de icones](#icon)
+- [Trabalhando com Hooks](#hooks)
 
 
 <a id="start"></a>
@@ -86,10 +88,81 @@ Por padrão estruturamos as pastas do React da seguinte maneira.
 
 ### Chamada dos componentes
 
-Normalmente renderizamos nossos componentes dentro do App.jsx, porem existe outras formas de se trabalhar criando rotas ou mesclando HTML com react
+Normalmente renderizamos nossos componentes dentro do App.jsx, porem existe outras formas de se trabalhar criando rotas ou mesclando HTML com react.
+
+Um componente é criado em forma de função, classe ou arrow function, um detalhe é que devemos por o return e se temos várias tags HTML no mesmo componente como no exemplo abaixo devemos envolve-los sob uma div ou sobre o <> veja um exemplo:
+
+```
+import React from 'react'
+
+const SearchBar = () => {
+  return(
+    <>
+      <form action="">
+        <input className="search-input" 
+          type="search"
+          placeholder="Buscar produtos"
+          required />
+        <button className="btn-search" type="submit">icon</button>
+      </form>
+    </>
+  )
+}
+
+export default SearchBar
+
+```
 
 ### Css de componentes
 
 Para lincar o css em um componente basta fazer o import dele no arquivo do componente.jsx
 
 > import "./nomeArquivo.css"
+
+<a id="icon"></a>
+
+## Usando uma lib de icones no React
+
+Para usar uma lib geralmente fazemos a instalação dela com o npm primeiro e depois fazemos o import do icone desejado no componente
+
+> npm install react-icons
+
+Quando for utilizar o icone dessa lib basta fazer o import dele com o nome do icone entre chaves e o caminho as primeira letras é relacionado ao framework que o icone pertence no caso 'bs'
+
+> import { BsSearch } from 'react-icons/bs'
+
+Use o icone como se fosse um componente
+
+> <BsSearch />
+
+<a id="hooks"></a>
+
+## Trabalhando com estados e Hooks
+
+Para pegar o valor de uma input por exemplo usamos os estados ou states do React, os Hooks sao como funcoes pre-definidas.
+
+### Hook useState()
+
+Sempre que utilizamos um Hook fazemos primeiro seu import, logo em seguida antes do nosso return criamos a variavel que vai interagir com o hook.
+
+> import { useState } from 'react'
+
+Nas variaveis temos um array onde o primeiro item se trata do valor em si e o segundo é uma função que usamos para atualizar o valor da primeira variável, por convenção utilizamos o os nomes iguais acrescido do set, por fim invocamos o hook e se necessários passamos um valor inicial para ele já atribuir a variável
+
+> const searchInput [searchValue, setSearchValue] = useState('')
+
+Agora para utilizarmos esse hook podemos criar eventos dentro das próprias tags HTML similar quando chamamos uma função direto do HTML, dessa forma agora que esta controlando o valor desse input não é o HTML e sim o React por isso no value atrelamos ao searchValue
+
+```
+  <input className="search-input" 
+          type="search"
+          placeholder="Buscar produtos"
+          value={searchValue}
+          required 
+          onChange={({ target }) => setSearchValue(target.value)}/>
+```
+
+Dentro do onChange capturamos o target fazendo a desistruturação do proprio evento que disparou, assim capturamos o target do input
+
+> onChange={(event) => setSearchValue(target.value)}
+> onChange={({target}) => setSearchValue(target.value)}

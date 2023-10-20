@@ -1,10 +1,11 @@
 import React from 'react'
 import './style.css'
+import SearchBar from '../SearchBar/SearchBar'
 
 const Header = () => {
   return (
     <header>
-      <h2>testess</h2>
+      <SearchBar />
     </header>
   )
 }

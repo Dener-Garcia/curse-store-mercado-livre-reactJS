@@ -1,3 +1,9 @@
 Header{
-  background-color: red;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  background-color: #fff159;
 }
