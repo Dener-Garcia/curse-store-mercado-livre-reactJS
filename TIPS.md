@@ -3,6 +3,7 @@
 - [Iniciando Projeto](#start)
 - [Limpando o Projeto](#cleaning)
 - [Setup do Projeto](#setup)
+- [Estruturando pastas](#folders)
 
 
 <a id="start"></a>
@@ -21,10 +22,12 @@ Por padrão vem alguns arquivos e componentes no projeto por isso vamos apagar o
 
 - apague o arquivo src > App.css
 - limpe o arquivo src > App.tsx
+- limpe o arquivo src > index.css
 - apague o arquivo logo.svg
 - apague o arquivo  public > vite.svg
+- apague o arquivo assets > react.svg
 
-<a id="segup"></a>
+<a id="setup"></a>
 
 ## Instalando depedencias e criando configuracao VSCode
 
@@ -71,3 +74,22 @@ Outra regra que vamos criar deve sempre haver uma linha vazia antes do 'export d
   "always"
   ]
 ```
+
+<a id="folder"></a>
+
+## Estruturas de pastas
+
+Por padrão estruturamos as pastas do React da seguinte maneira.
+
+- src > components = todos os componentes que vamos criar vao ficar dentro de pastas
+- src > components > Header = sera nosso componente Header.tsx e tambem o seu index.css
+
+### Chamada dos componentes
+
+Normalmente renderizamos nossos componentes dentro do App.jsx, porem existe outras formas de se trabalhar criando rotas ou mesclando HTML com react
+
+### Css de componentes
+
+Para lincar o css em um componente basta fazer o import dele no arquivo do componente.jsx
+
+> import "./nomeArquivo.css"
