@@ -1,4 +1,4 @@
-button{
+.cart-button{
   position: relative;
   display: flex;
   align-items: cente;
@@ -12,7 +12,7 @@ button{
   cursor: pointer;
 }
 
-span{
+.cart-button span{
   position: absolute;
   left: 50%;
   top: -4px;
@@ -24,6 +24,5 @@ span{
   padding: 8px;
   background-color: #ecf5ff;
   border-radius: 50%;
-
   font-size: 0.75rem;
 }

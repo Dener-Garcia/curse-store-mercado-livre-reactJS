@@ -6,6 +6,7 @@
 - [Estruturando pastas](#folders)
 - [Usando lib de icones](#icon)
 - [Trabalhando com Hooks](#hooks)
+- [Passando propriedas com props](#props)
 
 
 <a id="start"></a>
@@ -85,6 +86,7 @@ Por padrão estruturamos as pastas do React da seguinte maneira.
 
 - src > components = todos os componentes que vamos criar vao ficar dentro de pastas
 - src > components > Header = sera nosso componente Header.tsx e tambem o seu index.css
+- src > api = todas funcoes relacionadas a chamadas de api ficaram aqui.
 
 ### Chamada dos componentes
 
@@ -166,3 +168,14 @@ Dentro do onChange capturamos o target fazendo a desistruturação do proprio ev
 
 > onChange={(event) => setSearchValue(target.value)}
 > onChange={({target}) => setSearchValue(target.value)}
+
+### Hook useEffect()
+
+O useEffect possui 2 parametros, uma funcao de callback e um array de dependencias, geralmente colocamos uma variavel e sempre que ela muda de estado executamos o que esta dentro do useEffect, caso eu deixe meu array de dependencias vazio o que estiver dentro do useEffect sera renderizado somente uma vez ao montar o componente.
+
+<a id="props"></a>
+
+## Usando as props
+
+Podemos passar propriedades para componentes através das props, vamos desistruturar ela para pegar os dados desejados
+
