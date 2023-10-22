@@ -7,12 +7,13 @@ import ProductCard from '../ProductCard/ProductCard'
 
 const Products = () =>{
 
-  const [products, setProducts] = useState('')
+  const [products, setProducts] = useState([])
 
   useEffect(() => {
-    fetchProducts('arduino')
+    fetchProducts('espada')
       .then((response)=>{
         setProducts(response)
+        console.log("fez fetch")
       })
 
   }, [])
@@ -22,7 +23,7 @@ const Products = () =>{
     <section className="container products">
 
       {products.map((product) => 
-      <ProductCard key={products.id} 
+      <ProductCard key={product.id} 
       thumbnail={product.thumbnail} 
       title={product.title} 
       price={product.price}/>)}
