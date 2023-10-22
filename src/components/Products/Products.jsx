@@ -10,20 +10,23 @@ const Products = () =>{
   const [products, setProducts] = useState('')
 
   useEffect(() => {
-    fetchProducts('iphone')
+    fetchProducts('arduino')
       .then((response)=>{
         setProducts(response)
       })
 
   }, [])
   
-  console.log('renderizou', products)
   return(
+
     <section className="container products">
-      <ProductCard
-        thumbail={products.thumbail} 
-        title={products.title}
-        price={products.price}/>
+
+      {products.map((product) => 
+      <ProductCard key={products.id} 
+      thumbnail={product.thumbnail} 
+      title={product.title} 
+      price={product.price}/>)}
+
     </section>
   )
 }

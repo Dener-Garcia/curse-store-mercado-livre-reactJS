@@ -179,3 +179,13 @@ O useEffect possui 2 parametros, uma funcao de callback e um array de dependenci
 
 Podemos passar propriedades para componentes através das props, vamos desistruturar ela para pegar os dados desejados
 
+## Loops com React
+
+Uma convenção no React é que os loops tenham uma chave key para que o react se "ache" melhor nos seus loops.
+No exemplo abaixo usamos o proprio id para que cada elemento do loop se torne único.
+
+ ```{products.map((product) => 
+      <ProductCard key={products.id} 
+      thumbnail={product.thumbnail} 
+      title={product.title} 
+      price={product.price}/>)}```
