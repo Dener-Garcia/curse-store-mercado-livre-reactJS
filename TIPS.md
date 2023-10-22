@@ -7,6 +7,9 @@
 - [Usando lib de icones](#icon)
 - [Trabalhando com Hooks](#hooks)
 - [Passando propriedas com props](#props)
+- [Loops com React](#loops)
+- [Regex para substituir parte de uma string](#regex)
+- [Formatando numero para moeda](#currecy)
 
 
 <a id="start"></a>
@@ -87,6 +90,7 @@ Por padrão estruturamos as pastas do React da seguinte maneira.
 - src > components = todos os componentes que vamos criar vao ficar dentro de pastas
 - src > components > Header = sera nosso componente Header.tsx e tambem o seu index.css
 - src > api = todas funcoes relacionadas a chamadas de api ficaram aqui.
+- src > utils = todas funcoes reutilizaveis e genericas colocamos nessa pasta 
 
 ### Chamada dos componentes
 
@@ -179,6 +183,8 @@ O useEffect possui 2 parametros, uma funcao de callback e um array de dependenci
 
 Podemos passar propriedades para componentes através das props, vamos desistruturar ela para pegar os dados desejados
 
+<a id="loops"></a>
+
 ## Loops com React
 
 Uma convenção no React é que os loops tenham uma chave key para que o react se "ache" melhor nos seus loops.
@@ -188,4 +194,34 @@ No exemplo abaixo usamos o proprio id para que cada elemento do loop se torne ú
       <ProductCard key={products.id} 
       thumbnail={product.thumbnail} 
       title={product.title} 
-      price={product.price}/>)}```
+      price={product.price}/>)}
+  ```
+
+  <a id="regex"></a>
+
+## Regex
+
+Vamos utlizar o regex para trocar uma letra das nossas imagens que vem da API do mercado livre, para as nossas imagens virem com alta qualidade o final de cada imagem deve conter a letra W seguido do .jpg.
+Iniciando um regex com // e definindo algumas variaveis:
+
+> {thumbnail.replace(/\w\.jpg/gi, 'W.Jpg')}
+
+- g = global vai atual na string inteira
+- i = não é case sensitive
+- \w = qualquer caractere
+- , "W.jpg" = o que eu quero que substitua as condições anteriores
+
+<a id="currency"></a>
+
+## Formatando um valor para moeda local
+
+Existe uma funcao chamada toLocaleString() para formatar strings passando um objeto para estilizar a string e transforma-la em uma moeda, porcentagem por exemplo
+
+> variavel.toLocaleString("pt-br", { style: "currency", currency: "BRL" })
+
+Como boa pratica cria-se uma funcao para sempre que precisar usar esse metodo ele ja esteja pronto.
+
+
+10 min
+
+

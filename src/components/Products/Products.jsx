@@ -4,31 +4,32 @@ import { useState, useEffect } from 'react'
 
 import fetchProducts from '../../api/fetchProducts'
 import ProductCard from '../ProductCard/ProductCard'
+import Loading from '../Loading/Loading'
 
 const Products = () =>{
 
   const [products, setProducts] = useState([])
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    fetchProducts('espada')
+    fetchProducts('arduino')
       .then((response)=>{
         setProducts(response)
-        console.log("fez fetch")
+        setLoading(false)
       })
 
   }, [])
   
   return(
 
-    <section className="container products">
-
-      {products.map((product) => 
-      <ProductCard key={product.id} 
-      thumbnail={product.thumbnail} 
-      title={product.title} 
-      price={product.price}/>)}
-
+    (loading ? <Loading/> : <section className="container products"> {
+      products.map((product) => 
+        <ProductCard key={product.id} 
+          thumbnail={product.thumbnail} 
+          title={product.title} 
+          price={product.price}/>)}
     </section>
+    )
   )
 }
 
