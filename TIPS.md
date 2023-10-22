@@ -222,6 +222,6 @@ Existe uma funcao chamada toLocaleString() para formatar strings passando um obj
 Como boa pratica cria-se uma funcao para sempre que precisar usar esse metodo ele ja esteja pronto.
 
 
-10 min
+14 min
 
 
