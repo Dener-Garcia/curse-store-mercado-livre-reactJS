@@ -10,6 +10,7 @@
 - [Loops com React](#loops)
 - [Regex para substituir parte de uma string](#regex)
 - [Formatando numero para moeda](#currecy)
+- [Compatilhando estados entre componentes useContext](#shared)
 
 
 <a id="start"></a>
@@ -221,7 +222,107 @@ Existe uma funcao chamada toLocaleString() para formatar strings passando um obj
 
 Como boa pratica cria-se uma funcao para sempre que precisar usar esse metodo ele ja esteja pronto.
 
+<a id="shared"></a>
 
-14 min
+## Compatilhando valores, funcoes entre componentes de mesma hierarquia
+
+Vamos utilizar um hook chamado useContext para enviar informacoes do nivel mais baixo para o componente de nivel mais alto ou de mesma hierarquia.
+Para isso vamos criar um componente comum do react chamando-o de <Provider> e vamos envolver os componentes que precisam de informacoes que vão ficar dentro do Provider
+
+ 1. Crie uma função e de um nome para o seu context
+
+```
+import { createContext } from 'react'
+
+const AppContext = createContext ()
+
+export default AppContext
+```
+
+Criei o componente que chamei de Provider onde vao ficar as variaveis que desejamos compartilhar atraves das props.
+
+```
+import AppContext from './AppContext'
+
+const Provider = (props) => {
+
+const [products, setProducts] = useState([])
+
+const globalStates = {
+  products,
+  setProducts
+}
+
+return(
+  <AppContext.Provider value={globalStates}>
+   {props.children}
+  </AppContext.Provider>
+  )}
+export default Provider
+```
+
+- AppContext.Provider value = recebe um objeto que chamei de globalStates com as funcoes necessarias para atualizar variaveis atraves do useState
+
+Agora basta envolver os componentes que preciso compartilhar informacoes pelo meu componente Provider, no caso fiz isso no App.jsx
+
+```
+function App() {
+
+  return (
+    <Provider>
+      <Header />
+      <Products />
+    </Provider>
+  )
+}
+```
 
 
+Agora todos os componentes da arvore de componentes do Header e Products terao acesso a funcoes e variaveis que estao no Provider.
+Para os componentes pegarem as informacoes que vem do provider usamos o hook useContext() e passamos o nosso provider no caso AppContext.
+
+No componente que precisamos retirar informacoes com o useContext vamos criar uma variavel desistruturando-a para pegar as informacoes que precisaremos.
+No exemplo abaixo no componente SearchBar eu importo o AppContext e pego a funcao de setProducts.
+
+```
+import AppContext from '../../context/AppContext'
+
+const { setProducts } = useContext(AppContext)
+
+ const handleSearch = async (e) =>{ 
+    e.preventDefault()
+    const productsFromSearch = await fetchProducs(searchValue)
+    setSearchValue('')
+    setProducts(productsFromSearch)
+  }
+  
+  return(
+    resto do codigo)
+```
+
+- Na função HandleSearch eu estou pegando o valor da input do form que esta somente dentro do SearchBar e atribuindo ao setProducts que bem la do meu Provider.
+
+```
+Em Products onde renderizo os produtos vindo da api eu importo meu AppContext, faco a desistruturacao para pegar as variaveis produtcs que vem do provider.
+
+import AppContext from '../../context/AppContext'
+
+Const Products = () =>{
+
+  const { products, setProducts } = useContext(AppContext)
+
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    fetchProducts('arduino')
+      .then((response)=>{
+        setProducts(response)
+        setLoading(false)
+      })
+
+  }, [])}
+  
+  return( resto do codigo)
+```
+
+Dessa forma eu consigo enviar o valor do campo de pesquisa do componente SearchBar para esse componente Products

@@ -1,14 +1,16 @@
 import React from 'react'
 import './style.css'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
 
 import fetchProducts from '../../api/fetchProducts'
 import ProductCard from '../ProductCard/ProductCard'
 import Loading from '../Loading/Loading'
+import AppContext from '../../context/AppContext'
 
 const Products = () =>{
 
-  const [products, setProducts] = useState([])
+  const { products, setProducts } = useContext(AppContext)
+
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
