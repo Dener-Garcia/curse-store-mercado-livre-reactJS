@@ -1,0 +1,14 @@
+.cart{
+  width: 100%;
+  max-width: 350px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  background-color: #fff;
+}
+
+.cart-resume{
+  margin-top: 24px;
+}

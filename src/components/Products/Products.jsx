@@ -1,6 +1,6 @@
 import React from 'react'
 import './style.css'
-import { useState, useEffect, useContext } from 'react'
+import { useEffect, useContext } from 'react'
 
 import fetchProducts from '../../api/fetchProducts'
 import ProductCard from '../ProductCard/ProductCard'
@@ -9,9 +9,7 @@ import AppContext from '../../context/AppContext'
 
 const Products = () =>{
 
-  const { products, setProducts } = useContext(AppContext)
-
-  const [loading, setLoading] = useState(true)
+  const { products, setProducts, loading, setLoading } = useContext(AppContext)
 
   useEffect(() => {
     fetchProducts('arduino')

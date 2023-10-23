@@ -10,13 +10,15 @@ const SearchBar = () => {
 
   const [searchValue, setSearchValue] = useState('')
 
-  const { setProducts } = useContext(AppContext)
+  const { setProducts, setLoading } = useContext(AppContext)
 
   const handleSearch = async (e) =>{ 
     e.preventDefault()
+    setLoading(true)
     const productsFromSearch = await fetchProducs(searchValue)
     setSearchValue('')
     setProducts(productsFromSearch)
+    setLoading(false)
   }
   
   return(

@@ -4,11 +4,18 @@ import AppContext from './AppContext'
 
 const Provider = (props) => {
 
+
   const [products, setProducts] = useState([])
+  const [cartItems, setCartItems] = useState([])
+  const [loading, setLoading] = useState(true)
 
   const globalStates = {
     products,
-    setProducts
+    setProducts,
+    loading,
+    setLoading,
+    cartItems,
+    setCartItems
   }
 
   return(

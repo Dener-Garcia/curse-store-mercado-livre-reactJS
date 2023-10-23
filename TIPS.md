@@ -325,4 +325,32 @@ Const Products = () =>{
   return( resto do codigo)
 ```
 
-Dessa forma eu consigo enviar o valor do campo de pesquisa do componente SearchBar para esse componente Products
+Dessa forma eu consigo enviar o valor do campo de pesquisa do componente SearchBar para esse componente Products.
+
+Como o Loading parou de funcionar, vamos passar ele para o provider tabem dessa forma la no componente SearchBar podemos manipula-lo
+
+```
+ const [loading, setLoading] = useState(true)
+
+  const globalStates = {
+    products,
+    setProducts,
+    loading,
+    setLoading
+  }
+
+```
+No SearchBar jogamos ele para true quando fizer uma pesquisa e apos a resposta da API jogamos ele para false.
+
+```
+  const { setProducts, setLoading } = useContext(AppContext)
+
+  const handleSearch = async (e) =>{ 
+    e.preventDefault()
+    setLoading(true)
+    const productsFromSearch = await fetchProducs(searchValue)
+    setSearchValue('')
+    setProducts(productsFromSearch)
+    setLoading(false)
+  }
+```
