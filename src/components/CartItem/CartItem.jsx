@@ -1,12 +1,10 @@
+
 import React from 'react'
 import './style.css'
 import { MdOutlineDeleteOutline } from 'react-icons/md'
 
 
 const CartItem = (props) => {
-
-  console.log(props, 'props do cartItem')
-
   return(
     <section className="cart-item">
       <img

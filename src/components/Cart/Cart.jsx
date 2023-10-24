@@ -15,12 +15,16 @@ const Cart = () =>{
 
       <div className="cart-items">
 
-        {cartItems.map((cartItem)=>{
-          <CartItem key={cartItem.id} data={cartItem}/>}
-        )}
-
+        {cartItems.map((item) => (
+          <CartItem 
+            key={item.id}  
+            thumbnail={item.thumbnail}
+            title={item.title}
+            price={item.price} 
+          />
+        ))}
       </div>
-
+      
       <div className="cart-resume">
         Resumo dos valores do carrinho 
       </div>
