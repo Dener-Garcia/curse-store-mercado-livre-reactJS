@@ -12,12 +12,11 @@ const Products = () =>{
   const { products, setProducts, loading, setLoading } = useContext(AppContext)
 
   useEffect(() => {
-    fetchProducts('arduino')
+    fetchProducts('')
       .then((response)=>{
         setProducts(response)
         setLoading(false)
       })
-
   }, [])
   
   return(
@@ -27,7 +26,8 @@ const Products = () =>{
         <ProductCard key={product.id} 
           thumbnail={product.thumbnail} 
           title={product.title} 
-          price={product.price}/>)}
+          price={product.price}
+        />)}
     </section>
     )
   )

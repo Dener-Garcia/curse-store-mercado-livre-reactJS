@@ -1,14 +1,37 @@
 .cart{
+  margin-top: 56px;
   width: 100%;
   max-width: 350px;
-  height: 100vh;
+  height: calc(100vh - 56px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: fixed;
   top: 0;
   right: 0;
   padding: 1rem;
   background-color: #fff;
+  transform: translateX(110%);
+  transition: 0.2s ease;
+}
+
+.cart-items{
+  overflow-y: auto;
 }
 
 .cart-resume{
+  text-align: end;
   margin-top: 24px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.cart-resume h3{
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.cartActive{
+  transform: translateX(0);
 }

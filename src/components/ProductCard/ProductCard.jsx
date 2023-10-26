@@ -19,7 +19,7 @@ const ProductCard = (props) =>{
       <img className="card-img" src={props.thumbnail.replace(/\w\.jpg/gi, 'W.Jpg')} alt={props.title} />
       <div className="decription-card">
         <h2>{props.title}</h2>
-        <h3>{formatCurrency(props.price)}</h3>
+        <h3>{formatCurrency(props.price, 'BRL')}</h3>
       </div>
       <button type="button"
         onClick={handleAddCart}>

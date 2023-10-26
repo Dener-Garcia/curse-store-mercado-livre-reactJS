@@ -11,6 +11,7 @@
 - [Regex para substituir parte de uma string](#regex)
 - [Formatando numero para moeda](#currecy)
 - [Compatilhando estados entre componentes useContext](#shared)
+- [Somando valores com reduce](#reduce)
 
 
 <a id="start"></a>
@@ -353,4 +354,16 @@ No SearchBar jogamos ele para true quando fizer uma pesquisa e apos a resposta d
     setProducts(productsFromSearch)
     setLoading(false)
   }
+```
+<a id="reduce"></a>
+
+## Usando reduce para somar valores
+
+Uma boa alternativa para somar os valores foi a utilização do reduce, usei essa função na sidebar de produtos adicionados ao carrinho.
+Basicamente ela pega o valor inicial logo após o "}, 0" que no nosso caso é o zero mas poderia ser um objeto ou array, e a cada iteração ela soma o valor do item propriamente dito do nosso array + valor inicial e joga no acumulador, na proxima iteração o acumulador não será mais zero acumulando os valores como precisamos.
+
+```
+  const novaVariavel = arrayOndeSeraAplicado.reduce((acumulador, item)=>{
+    return item.price + acc
+  }, 0)
 ```

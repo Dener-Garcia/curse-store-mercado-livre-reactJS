@@ -8,6 +8,7 @@ const Provider = (props) => {
   const [products, setProducts] = useState([])
   const [cartItems, setCartItems] = useState([])
   const [loading, setLoading] = useState(true)
+  const [isCartVisible, setIsCartVisible] = useState(false)
 
   const globalStates = {
     products,
@@ -15,7 +16,9 @@ const Provider = (props) => {
     loading,
     setLoading,
     cartItems,
-    setCartItems
+    setCartItems,
+    isCartVisible,
+    setIsCartVisible
   }
 
   return(

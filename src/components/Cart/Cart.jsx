@@ -2,22 +2,26 @@ import React, { useContext } from 'react'
 import './style.css'
 import CartItem from '../CartItem/CartItem'
 import AppContext from '../../context/AppContext'
+import formatCurrency from '../../utils/formatCurrency'
 
 const Cart = () =>{
 
-  const { cartItems } = useContext(AppContext)
+  const { cartItems, isCartVisible } = useContext(AppContext)
 
-  console.log(cartItems, 'item recebido no carrinho')
+  
+  const totalCart = cartItems.reduce((acc, item)=>{
+    return item.price + acc
+  }, 0)
 
   return(
 
-    <section className="cart">
+    <section className={`cart ${isCartVisible ? 'cartActive' : ''}`}>
 
       <div className="cart-items">
 
         {cartItems.map((item, i) => (
           <CartItem 
-            key={i ++}  
+            key={i++}  
             thumbnail={item.thumbnail}
             title={item.title}
             price={item.price} 
@@ -26,7 +30,8 @@ const Cart = () =>{
       </div>
       
       <div className="cart-resume">
-        Resumo dos valores do carrinho 
+        <h3>Total no carrinho</h3>
+        {formatCurrency(totalCart, 'brl')}
       </div>
 
     </section>
