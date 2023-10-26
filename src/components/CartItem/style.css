@@ -3,7 +3,7 @@
   display: flex;
   align-items: start;
   border-bottom: solid 1px #ddd;
-  padding-bottom: 16px;
+  padding: 8px;
 }
 
 .cart-item img{
@@ -11,7 +11,7 @@
 }
 
 .cart-item-content{
-  padding: 0 32px 0 0;
+  padding: 16px 24px;;
 }
 
 .cart-item-content h2{
@@ -27,7 +27,7 @@
 
 .btn-cart-item-remove{
   position: absolute;
-  top: 0;
+  top: 8px;
   right: 0;
   width: 32px;
   height: 32px;
@@ -37,7 +37,7 @@
   font-size: 32px;
   padding: 2px;
   border: solid 2px #d83232;
-  border-radius: 4px;
+  border-radius: 40px;
   background: none;
   color: #d83232;
   cursor: pointer;
@@ -45,6 +45,6 @@
 }
 
 .btn-cart-item-remove:hover{
-  background: #d83232;
+  background: #d84444;
   color: #ddd;
 }
