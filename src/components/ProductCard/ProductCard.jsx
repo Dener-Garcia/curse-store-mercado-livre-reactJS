@@ -8,11 +8,11 @@ const ProductCard = (props) =>{
 
   const { cartItems, setCartItems } = useContext(AppContext)
 
-  const handleAddCart = () =>{
-    const updatedCartItems = cartItems
-    updatedCartItems.push(props)
-    setCartItems(updatedCartItems)
+  const handleAddCart = () => {
+    setCartItems([...cartItems, props]);
+    console.log(...cartItems)
   }
+  
 
   return(
     <section className="product-card">
