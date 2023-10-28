@@ -19,12 +19,13 @@ const Cart = () =>{
 
       <div className="cart-items">
 
-        {cartItems.map((item, i) => (
+        {cartItems.map((item) => (
           <CartItem 
-            key={i++}  
+            key={item.id}  
             thumbnail={item.thumbnail}
             title={item.title}
             price={item.price} 
+            id={item.id}
           />
         ))}
       </div>

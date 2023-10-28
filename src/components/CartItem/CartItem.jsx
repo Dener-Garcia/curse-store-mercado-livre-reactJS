@@ -11,10 +11,12 @@ const CartItem = (props) => {
   const { cartItems, setCartItems } = useContext(AppContext)
 
   const handleRemove = () => {
-    const updateItemsCart = cartItems.filter((item) => item.id != item.id)
-    setCartItems(updateItemsCart)
+    const updateItemsCart = cartItems.filter((item) => item.id != props.id)
+    console.log('props', props)
     console.log(updateItemsCart)
+    setCartItems(updateItemsCart)
   }
+
 
   return(
     <section className="cart-item">

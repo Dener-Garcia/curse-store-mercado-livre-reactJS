@@ -9,10 +9,9 @@ const ProductCard = (props) =>{
   const { cartItems, setCartItems } = useContext(AppContext)
 
   const handleAddCart = () => {
-    setCartItems([...cartItems, props]);
-    console.log(...cartItems)
+    setCartItems([...cartItems, props])
   }
-  
+
 
   return(
     <section className="product-card">

@@ -24,6 +24,7 @@ const Products = () =>{
     (loading ? <Loading/> : <section className="container products"> {
       products.map((product) => 
         <ProductCard key={product.id} 
+          id={product.id}
           thumbnail={product.thumbnail} 
           title={product.title} 
           price={product.price}
