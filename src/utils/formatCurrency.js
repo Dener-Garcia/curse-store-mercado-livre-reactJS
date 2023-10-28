@@ -1,15 +1,11 @@
 const formatCurrency = (value, country) => {
-  if (country === 'BRL') {
-    const formattedValue = (value / 100).toFixed(2).replace('.', ',');
-    return `R$${formattedValue}`;
-  }
 
-  // Adicione outras moedas aqui, se necessário
+  const formattedNumber = (value / 100)
 
-  return value.toLocaleString('pt-br', {
+  return formattedNumber.toLocaleString('pt-br', {
     style: 'currency', 
     currency: country
-  });
+  })
 }
 
-export default formatCurrency;
+export default formatCurrency
