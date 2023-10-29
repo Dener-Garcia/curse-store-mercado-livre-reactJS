@@ -1,6 +1,6 @@
 {
   "name": "curse-store-mercado-livre-reactjs",
-  "homepage": "https://github.com/Dener-Garcia/curse-store-mercado-livre-reactJS",
+  "homepage": "https://dener-garcia.github.io/curse-store-mercado-livre-reactJS/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,10 +8,10 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "dependencies": {
-    "gh-pages": "^6.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.11.0"
@@ -22,6 +22,7 @@
     "@vitejs/plugin-react": "^4.0.3",
     "eslint": "^8.51.0",
     "eslint-plugin-react": "^7.33.2",
+    "gh-pages": "^6.0.0",
     "vite": "^4.4.5"
   }
 }
