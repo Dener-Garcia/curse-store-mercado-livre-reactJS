@@ -26,3 +26,25 @@
   border-radius: 50%;
   font-size: 0.75rem;
 }
+
+@keyframes shake {
+  0%{
+    transform: rotate(5deg);
+  }
+  25%{
+    transform: rotate(-5deg)
+  }
+  50%{
+    transform: rotate(5deg)
+  }
+  75%{
+    transform: rotate(-5deg)
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+}
+
+.shakeAnimation{
+  animation: shake 0.3s ease infinite forwards;
+}

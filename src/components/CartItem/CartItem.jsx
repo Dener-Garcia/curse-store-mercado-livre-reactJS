@@ -12,8 +12,6 @@ const CartItem = (props) => {
 
   const handleRemove = () => {
     const updateItemsCart = cartItems.filter((item) => item.id != props.id)
-    console.log('props', props)
-    console.log(updateItemsCart)
     setCartItems(updateItemsCart)
   }
 

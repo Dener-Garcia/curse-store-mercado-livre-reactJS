@@ -9,6 +9,8 @@ const Provider = (props) => {
   const [cartItems, setCartItems] = useState([])
   const [loading, setLoading] = useState(true)
   const [isCartVisible, setIsCartVisible] = useState(false)
+  const [shakeButton, setShakeButton] = useState(false)
+  const [imgStateNull, setImgStateNull] = useState(true)
 
   const globalStates = {
     products,
@@ -18,7 +20,11 @@ const Provider = (props) => {
     cartItems,
     setCartItems,
     isCartVisible,
-    setIsCartVisible
+    setIsCartVisible,
+    shakeButton,
+    setShakeButton,
+    imgStateNull,
+    setImgStateNull
   }
 
   return(

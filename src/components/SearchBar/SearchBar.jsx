@@ -10,10 +10,11 @@ const SearchBar = () => {
 
   const [searchValue, setSearchValue] = useState('')
 
-  const { setProducts, setLoading } = useContext(AppContext)
+  const { setProducts, setLoading, setImgStateNull } = useContext(AppContext)
 
   const handleSearch = async (e) =>{ 
     e.preventDefault()
+    setImgStateNull(false)
     setLoading(true)
     const productsFromSearch = await fetchProducs(searchValue)
     setSearchValue('')

@@ -6,10 +6,14 @@ import AppContext from '../../context/AppContext'
 
 const ProductCard = (props) =>{
 
-  const { cartItems, setCartItems } = useContext(AppContext)
+  const { cartItems, setCartItems, setShakeButton } = useContext(AppContext)
 
   const handleAddCart = () => {
     setCartItems([...cartItems, props])
+    setShakeButton(true)
+    setTimeout(() => {
+      setShakeButton(false)
+    }, 300)
   }
 
 

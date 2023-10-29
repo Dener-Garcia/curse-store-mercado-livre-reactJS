@@ -1,0 +1,24 @@
+.state-null-img{
+  width: 100%;
+  height: 80vh;
+  padding: 80px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.state-img{
+  width: 400px;
+  height: 400px;
+  margin: auto;
+}
+
+.state-title{
+  font-size: 32px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.dNone{
+  display: none;
+}

@@ -6,14 +6,14 @@ import AppContext from '../../context/AppContext'
 
 const CartButton = () => {
 
-  const {cartItems, isCartVisible, setIsCartVisible} = useContext(AppContext)
+  const {cartItems, isCartVisible, setIsCartVisible, shakeButton} = useContext(AppContext)
 
   const showSidebar = () =>{
     setIsCartVisible(!isCartVisible)
   }
   
   return (
-    <button className="cart-button" 
+    <button className={`cart-button ${shakeButton ? 'shakeAnimation' : ''}`} 
       type="button"
       onClick={showSidebar}>
       <AiOutlineShoppingCart/>
