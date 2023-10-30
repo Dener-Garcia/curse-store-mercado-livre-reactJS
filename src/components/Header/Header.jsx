@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <header>
       <section className="container-header">
-        <FaStoreAlt className="store-icon" size={40} />
+        <FaStoreAlt className="store-icon" />
         <SearchBar />
         <CartButton/>
       </section>

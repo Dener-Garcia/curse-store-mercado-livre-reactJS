@@ -14,9 +14,12 @@ Header{
   max-width: 1144px;
   margin: auto;
   display: flex;
-  justify-content: space-between;
+  gap: 16px;
 }
 
 .store-icon{
+  min-width: 44px;
+  min-height: 44px;
   color: #333;
 }
+
