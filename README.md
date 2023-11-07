@@ -1,8 +1,81 @@
-# React + Vite
+# 💡 Mercado Livre Store
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto em React desenvolvido durante curso de React do Manual do dev.
 
-Currently, two official plugins are available:
+__Você pode ver esse projeto bem  [Aqui]([https://www.seuSite.com.br](https://dener-garcia.github.io/curse-store-mercado-livre-reactJS/))__
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+ 🖥️ Versão web                                                    |  📱 Versão Mobile
+:----------:                                                    |  :--------------:
+<img src="public/assets/screenshot-desktop.jpg" width="100%"/>  |  <img src="public/assets/screenshot-mobile.jpg" width="100%"/>
+
+## ⚙️ Funcionalidades
+
+- ✅ Consumo API Mercado Livre
+- ☑️ Compartilhamento de estados com useContext
+- ✅ Design Responsivo
+- ☑️ Micro animações
+
+## 🧰 Bibliotecas
+
+- ✅ React icons
+- ☑️ gh pages para deploy automático
+
+## ⬇️ Rodando o projeto
+
+Clone esse repositório
+Faça o downloado para sua máquina
+Dentro da pasta insira os comandos abaixo
+5. ```
+     npm install
+     npm run dev
+    ```
+6. Você deve ter o node instalado na sua máquina
+
+## 🧩 Tecnologías Utilizadas
+
+<div align="left">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"height="40" alt="Reactjs logo"  />
+  <img width="24" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="40" alt="html5 logo"  />
+  <img width="24" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="40" alt="css3 logo"  />
+  <img width="24" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" height="40" alt="npm logo"  />
+</div>
+
+## 🤯 Aprendizados
+
+Montar uma single page application com React, entender o compartilhamento dos estados entre componentes pai e filho e vice-versa, consumir api e tratar seus erros com fetch.
+
+## 🙏 Agradecimentos
+
+Canal manual do dev disponibiliza esse tutorial com grandes informações sobre React e uma didatica impecável.
+
+__[PlayList-Carrinho de compras][(https://www.linkedin/in/fulano](https://www.youtube.com/watch?v=HSAlJJI6K_A&list=PLdtmpu_1ITQKuHMG4s0wUMa55OdsYeWw0)) : Canal Manual do dev__
+
+
+
+## 💬 Vamos nos conectar?
+
+<div align="left">
+  <a href="https://www.linkedin.com/in/denergarcia/" target="_blank">
+    <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/linkedin/default.svg" width="52" height="40" alt="linkedin logo"  />
+  </a>
+    <img width="24" />
+  <a href="https://www.youtube.com/@dener.criarbr" target="_blank">
+    <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/youtube/default.svg" width="52" height="40" alt="youtube logo"  />
+  </a>
+    <img width="24" />
+  <a href="https://www.instagram.com/dener.criarbr" target="_blank">
+  <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/instagram/default.svg" width="52" height="40" alt="instagram logo"  />
+  </a>
+    <img width="24" />
+  <a href="https://twitter.com/Dener_criarbr" target="_blank">
+    <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/twitter/default.svg" width="52" height="40" alt="twitter logo"  />
+  </a>
+    <img width="24" />
+  <a href="https://www.behance.net/dener-garcia" target="_blank">
+    <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/behance/default.svg" width="52" height="40" alt="behance logo"  />
+  </a>
+</div>
