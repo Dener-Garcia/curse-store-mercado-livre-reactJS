@@ -5,9 +5,9 @@ Projeto em React desenvolvido durante curso de React do Manual do dev.
 __Você pode ver esse projeto bem  [Aqui]([https://www.seuSite.com.br](https://dener-garcia.github.io/curse-store-mercado-livre-reactJS/))__
 
 
- 🖥️ Versão web                                                    |  📱 Versão Mobile
+ 🖥️ Versão web                                                  |  📱 Versão Mobile
 :----------:                                                    |  :--------------:
-<img src="public/assets/screenshot-desktop.jpg" width="100%"/>  |  <img src="public/assets/screenshot-mobile.jpg" width="100%"/>
+<img src="public/screenshot-desktop.jpg" width="100%"/>  |  <img src="public/screenshot-mobile.jpg" width="100%"/>
 
 ## ⚙️ Funcionalidades
 
@@ -23,14 +23,14 @@ __Você pode ver esse projeto bem  [Aqui]([https://www.seuSite.com.br](https://d
 
 ## ⬇️ Rodando o projeto
 
-Clone esse repositório
-Faça o downloado para sua máquina
-Dentro da pasta insira os comandos abaixo
-5. ```
+1. Clone esse repositório
+2. Faça o downloado para sua máquina
+3. Dentro da pasta insira os comandos abaixo
+4. ```
      npm install
      npm run dev
-    ```
-6. Você deve ter o node instalado na sua máquina
+    ```   
+5. Você deve ter o node instalado na sua máquina
 
 ## 🧩 Tecnologías Utilizadas
 
@@ -52,9 +52,7 @@ Montar uma single page application com React, entender o compartilhamento dos es
 
 Canal manual do dev disponibiliza esse tutorial com grandes informações sobre React e uma didatica impecável.
 
-__[PlayList-Carrinho de compras][(https://www.linkedin/in/fulano](https://www.youtube.com/watch?v=HSAlJJI6K_A&list=PLdtmpu_1ITQKuHMG4s0wUMa55OdsYeWw0)) : Canal Manual do dev__
-
-
+__[PlayList](https://www.youtube.com/watch?v=HSAlJJI6K_A&list=PLdtmpu_1ITQKuHMG4s0wUMa55OdsYeWw0) : Canal Manual do dev__
 
 ## 💬 Vamos nos conectar?
 
