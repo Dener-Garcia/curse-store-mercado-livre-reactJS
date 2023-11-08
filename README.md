@@ -7,7 +7,7 @@ __Você pode ver esse projeto bem  [Aqui]([https://www.seuSite.com.br](https://d
 
  🖥️ Versão web                                                  |  📱 Versão Mobile
 :----------:                                                    |  :--------------:
-<img src="public/screenshot-desktop.jpg" width="100%"/>  |  <img src="public/screenshot-mobile.jpg" width="100%"/>
+<img src="public/screenshot-desktop.png" width="100%"/>  |  <img src="public/screenshot-mobile.png" width="100%"/>
 
 ## ⚙️ Funcionalidades
 
