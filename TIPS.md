@@ -177,6 +177,7 @@ Dentro do onChange capturamos o target fazendo a desistruturação do proprio ev
 
 ### Hook useEffect()
 
+Quando queremos renderizar alguma coisa no componente o React não entende bem a forma como o javascript faz então usamos esse hook ele fica observando se os dados mudaram e renderiza aquele componente novamente.
 O useEffect possui 2 parametros, uma funcao de callback e um array de dependencias, geralmente colocamos uma variavel e sempre que ela muda de estado executamos o que esta dentro do useEffect, caso eu deixe meu array de dependencias vazio o que estiver dentro do useEffect sera renderizado somente uma vez ao montar o componente.
 
 <a id="props"></a>
